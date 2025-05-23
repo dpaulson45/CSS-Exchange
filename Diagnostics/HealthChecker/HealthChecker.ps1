@@ -128,6 +128,9 @@ param(
     [Parameter(Mandatory = $true, ParameterSetName = "AnalyzeDataOnly", HelpMessage = "Enable to reprocess the data that was previously collected and display to the screen")]
     [switch]$AnalyzeDataOnly,
 
+    [Parameter(Mandatory = $false)]
+    [int]$DevTestingChange,
+
     [Parameter(Mandatory = $true, ParameterSetName = "VulnerabilityReport", HelpMessage = "Enable to collect data on the entire environment and report only the security vulnerabilities.")]
     [switch]$VulnerabilityReport,
 
