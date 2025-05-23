@@ -172,6 +172,8 @@ begin {
 
     $BuildVersion = ""
 
+    Write-Host "Testing"
+
     $Script:VerboseEnabled = $false
     #this is to set the verbose information to a different color
     if ($PSBoundParameters["Verbose"]) {
