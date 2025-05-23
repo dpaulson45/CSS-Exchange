@@ -7,6 +7,7 @@
 	Requires: Exchange Management Shell and administrator rights on the target Exchange
 	server as well as the local machine.
     Major Release History:
+        5/23/2025 - Multithreading release date.
         4/20/2021  - Initial Public Release on CSS-Exchange.
         11/10/2020 - Initial Public Release of version 3.
         1/18/2017 - Initial Public Release of version 2.
@@ -126,6 +127,9 @@ param(
 
     [Parameter(Mandatory = $true, ParameterSetName = "AnalyzeDataOnly", HelpMessage = "Enable to reprocess the data that was previously collected and display to the screen")]
     [switch]$AnalyzeDataOnly,
+
+    [Parameter(Mandatory = $false)]
+    [int]$DevTestingChange,
 
     [Parameter(Mandatory = $true, ParameterSetName = "VulnerabilityReport", HelpMessage = "Enable to collect data on the entire environment and report only the security vulnerabilities.")]
     [switch]$VulnerabilityReport,
